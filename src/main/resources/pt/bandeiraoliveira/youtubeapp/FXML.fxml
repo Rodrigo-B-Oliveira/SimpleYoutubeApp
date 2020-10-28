@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane maxHeight="720.0" maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="200" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.bandeiraoliveira.youtubeapp.FXMLController">
+    <children>
+        <SplitPane dividerPositions="0.03899721448467967" layoutX="516.0" layoutY="260.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane prefHeight="81.0" prefWidth="1278.0" SplitPane.resizableWithParent="false">
+                    <children>
+                        <VBox layoutX="39.0" layoutY="-75.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <TextField fx:id="searchField" onAction="#search" />
+                            </children>
+                        </VBox>
+                        <VBox layoutX="149.0" AnchorPane.leftAnchor="149.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Button fx:id="searchButton" mnemonicParsing="false" onAction="#search" text="Search" />
+                            </children>
+                        </VBox>
+                        <Label fx:id="errorLabel" layoutX="211.0" layoutY="4.0" prefHeight="17.0" prefWidth="247.0" textFill="RED" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane SplitPane.resizableWithParent="false">
+                    <children>
+                        <WebView fx:id="webView" maxHeight="-1.0" maxWidth="-1.0" minHeight="-1.0" minWidth="-1.0" prefHeight="687.0" prefWidth="1278.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
